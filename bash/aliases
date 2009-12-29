@@ -8,6 +8,7 @@ alias ee="mate ~/bin/dotfiles/bash/env"
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
 alias cdf='cd ~/projects/furnish'
+alias cdp='cd ~/projects/phase2'
 alias cdb='cd ~/projects/book'
 
 function cdp() {
@@ -73,8 +74,10 @@ function new-hg() {
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 alias gb='git branch'
 alias gba='git branch -a'
+alias gmm='git merge master'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
+alias gci='git commit -v -m'
 alias gaa='git add .'
 alias ga='git add'
 # Commit pending changes and quote all args as message
@@ -91,6 +94,7 @@ alias gst='git status'
 alias gt='git status'
 alias g='git status'
 alias eg='mate .git/config'
+alias glg='git log --graph --pretty=format:"%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 # Git clone from GitHub
 function gch() {
   git clone git://github.com/$USER/$1.git
@@ -137,6 +141,8 @@ alias mq="mate app config lib db schema public spec test vendor/gems vendor/plug
 # Ruby
 alias r="rake"
 alias rt="rake test"
+alias rtu="rake test:units"
+alias rtf="rake test:functionals"
 alias rdm="rake db:migrate"
 alias rdr="rake db:rollback"
 
@@ -150,6 +156,7 @@ alias ms='mongrel_rails stop'
 alias rp='touch tmp/restart.txt'
 alias sc='./script/console'
 alias sg='./script/generate'
+alias sgm='./script/generate migration'
 alias sp='./script/plugin'
 alias ss='./script/server'
 alias tl='tail -f log/*.log'
