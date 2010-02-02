@@ -4,3 +4,7 @@ export PATH=/usr/local/git/bin:$PATH
 export PATH=~/bin:$PATH
 
 export EDITOR="mate -w"
+
+export MAGICK_HOME="/usr/local/imagemagick"
+export PATH=$MAGICK_HOME/bin:$PATH
+export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"

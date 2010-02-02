@@ -70,6 +70,14 @@ function new-hg() {
     hg clone ssh://hg@example.com/$1
 }
 
+# Macports Mysql
+alias my_stop="sudo launchctl stop org.macports.mysql5"
+alias my_start="sudo launchctl start org.macports.mysql5"
+alias my_rs="my_stop ; my_start"
+alias myconf="mate /opt/local/etc/mysql5/my.cnf"
+alias mysql="mysql5"
+alias mysqladmin="mysqladmin5"
+
 # Git
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 alias gb='git branch'

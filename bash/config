@@ -55,3 +55,12 @@ PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]\$(vcprompt) \n→ "
 
 #test -r /sw/bin/init.sh && . /sw/bin/init.sh
 #if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+# RVM
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+# Bash Completion
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
+  
