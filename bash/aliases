@@ -7,9 +7,9 @@ alias ee="mate ~/bin/dotfiles/bash/env"
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
-alias cdf='cd ~/projects/furnish'
+alias cdf='rvm ree && cd ~/projects/furnish'
 alias cdp='cd ~/projects/phase2'
-alias cdb='cd ~/projects/book'
+alias cdb='rvm 1.9.2-head && cd ~/projects/beginningrails/blog'
 
 function cdp() {
  cd ~/projects/$*
@@ -130,6 +130,9 @@ function new-git() {
   git config branch.master.merge refs/heads/master
   git config push.default current
 }
+# Git SVN
+alias gspull='git spull'
+alias gspush='git spush'
 
 # Text editing
 # Emacs

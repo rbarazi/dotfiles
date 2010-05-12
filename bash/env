@@ -1,5 +1,6 @@
 # Set PATH, CDPATH, EDITOR, etc.
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH=/Users/rbarazi/java/android-sdk-mac_86/tools:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=~/bin:$PATH
 
