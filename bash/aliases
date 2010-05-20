@@ -131,8 +131,8 @@ function new-git() {
   git config push.default current
 }
 # Git SVN
-alias gspull='git spull'
-alias gspush='git spush'
+alias gsl='git spull'
+alias gsp='git spush'
 
 # Text editing
 # Emacs
