@@ -4,12 +4,13 @@
 alias reload='source ~/bin/dotfiles/bash/aliases'
 alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
 alias ee="mate ~/bin/dotfiles/bash/env"
+alias ec="mate ~/bin/dotfiles/bash/config"
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
-alias cdf='cd ~/projects/furnish'
+alias cdf='rvm ree && cd ~/projects/furnish'
 alias cdp='cd ~/projects/phase2'
-alias cdb='cd ~/projects/book'
+alias cdb='rvm 1.9.2-head && cd ~/projects/beginningrails/blog'
 
 function cdp() {
  cd ~/projects/$*
@@ -75,8 +76,6 @@ alias my_stop="sudo launchctl stop org.macports.mysql5"
 alias my_start="sudo launchctl start org.macports.mysql5"
 alias my_rs="my_stop ; my_start"
 alias myconf="mate /opt/local/etc/mysql5/my.cnf"
-alias mysql="mysql5"
-alias mysqladmin="mysqladmin5"
 
 # Git
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
@@ -130,6 +129,9 @@ function new-git() {
   git config branch.master.merge refs/heads/master
   git config push.default current
 }
+# Git SVN
+alias gsl='git spull'
+alias gsp='git spush'
 
 # Text editing
 # Emacs
@@ -163,10 +165,12 @@ alias mr='mongrel_rails start'
 alias ms='mongrel_rails stop'
 alias rp='touch tmp/restart.txt'
 alias sc='./script/console'
+alias rc='./script/rails console'
 alias sg='./script/generate'
 alias sgm='./script/generate migration'
 alias sp='./script/plugin'
 alias ss='./script/server'
+alias r='./script/rails'
 alias tl='tail -f log/*.log'
 alias ts='thin start'
 
@@ -263,3 +267,6 @@ function __rm_single_file(){
     fi
 }
 
+function wiki() {
+    dig +short txt $1.wp.dg.cx
+}
