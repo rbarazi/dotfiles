@@ -175,9 +175,9 @@ alias tl='tail -f log/*.log'
 alias ts='thin start'
 
 # Vlad
-alias vd='rake vlad:deploy'
-alias vdb='rake vlad:deploy_beta'
-alias vc='rake vlad:clone'
+alias vd='rvm system && rake vlad:deploy && rvm ree'
+alias vdb='rvm system && rake vlad:deploy_beta && rvm ree'
+alias vc='rvm system && rake vlad:clone && rvm ree'
 
 # TDD / BDD
 
