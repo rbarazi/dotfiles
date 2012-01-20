@@ -174,6 +174,9 @@ alias r='./script/rails'
 alias tl='tail -f log/*.log'
 alias ts='thin start'
 
+# Bundler
+alias be='bundle exec'
+
 # Vlad
 alias vd='rvm system && rake vlad:deploy && rvm ree'
 alias vdb='rvm system && rake vlad:deploy_beta && rvm ree'
@@ -281,7 +284,23 @@ function cp-release() {
   cp stylesheets/pressly.css ../pressly-data/themes/$1/public/styles/pressly.css
 }
 
+function cp-style() {
+  cp themes/default/views/sass/partials/$1 themes/$2/views/sass/partials/
+}
+
 function cleanup-theme() {
   rm -rf demos/$1
   gco demos/$1/global
 }
+
+function filecount() {
+  find . -mindepth 2 | awk -F/ {'print $2'} | uniq -c
+}
+
+hitch() {
+command hitch "$@"
+if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
+alias unhitch='hitch -u'
+# Uncomment to persist pair info between terminal instances
+# hitch
