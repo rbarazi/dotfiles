@@ -1,11 +1,16 @@
+export EC2_HOME="~/bin/ec2"
+
 # Set PATH, CDPATH, EDITOR, etc.
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH=/Users/rbarazi/java/android-sdk-mac_86/tools:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=~/bin:$PATH
+export PATH=$PATH:$EC2_HOME/bin
 
 export EDITOR="mate -w"
+# export EDITOR='vim'
 
 export MAGICK_HOME="/usr/local/imagemagick"
 export PATH=$MAGICK_HOME/bin:$PATH
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"
+
