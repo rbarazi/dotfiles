@@ -42,12 +42,17 @@ BWHITE='\e[47m'
 # Note that the git branch is given a special color
 #PS1="\n\u:\w \[$EBLACK\]\[$(vcprompt)]\[$NO_COLOR\] \n→ "
 
+# Git Bash Promp
+if [ -f ~/bin/dotfiles/bash/git_svn_bash_prompt.sh ]; then
+    . ~/bin/dotfiles/bash/git_svn_bash_prompt.sh
+fi
 
 #export CLICOLOR=1
 #export TERM=xterm-color
 #export LSCOLORS=gxgxcxdxbxegedabagacad  # cyan directories
 #export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]$(vcprompt) \n→ '
-PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]\$(vcprompt --format "[%s:%b]") \n→ "
+# PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]\$(vcprompt --format "[%s:%b]") \n→ "
+# PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]\$PS1 \n→ "
 
 #export DISPLAY=:0.0
 
@@ -63,4 +68,3 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
-  

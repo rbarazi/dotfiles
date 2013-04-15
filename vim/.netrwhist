@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/rbarazi/projects/nulayer/pressly-data/.git'
 let g:netrw_dirhist_2='/Users/rbarazi/projects/nulayer/pressly-data/public'
+let g:netrw_dirhist_3='/Users/rbarazi/projects/nulayer/pressly-data'
+let g:netrw_dirhist_4='/Users/rbarazi/projects/nulayer/pressly-data/lib'
+let g:netrw_dirhist_5='/Users/rbarazi/projects/nulayer/pressly-data/lib/pressly-data'
+let g:netrw_dirhist_6='/Users/rbarazi/projects/nulayer/pressly-data/lib/pressly-data/publishing'

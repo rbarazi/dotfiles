@@ -104,6 +104,7 @@ alias gt='git status'
 alias g='git status'
 alias eg='mate .git/config'
 alias glg='git log --graph --pretty=format:"%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
+alias gslg='git shortlog -s -n'
 # Git clone from GitHub
 function gch() {
   git clone git://github.com/$USER/$1.git
@@ -148,6 +149,7 @@ function ct() {
 # TextMate
 alias mm="mate"
 alias m="mate ."
+alias mp="mate Capfile Vagrantfile doc spec Gemfile* app features test Guardfile config lib Procfile config.ru README.md cookbooks public Rakefile db script"
 alias mq="mate app config lib db schema public spec test vendor/gems vendor/plugins Rakefile Capfile Vladfile Todofile README stories merb slices tasks features &"
 
 # Ruby
@@ -158,6 +160,9 @@ alias rtf="rake test:functionals"
 alias rdm="rake db:migrate"
 alias rdr="rake db:rollback"
 
+# Selenium
+alias selenium="java -jar ~/bin/selenium-server-standalone-2.28.0.jar"
+
 function markdown() {
 /Applications/TextMate.app/Contents/SharedSupport/Support/bin/Markdown.pl $1 > $1.html
 }
@@ -167,7 +172,9 @@ alias mr='mongrel_rails start'
 alias ms='mongrel_rails stop'
 alias rp='touch tmp/restart.txt'
 alias sc='./script/console'
-alias rc='./script/rails console'
+alias pc='be pry -r ./config/environment'
+alias rc='be rails console'
+alias rs='be rails server'
 alias sg='./script/generate'
 alias sgm='./script/generate migration'
 alias sp='./script/plugin'
@@ -184,6 +191,9 @@ alias vd='rake vlad:deploy'
 alias vdb='rake vlad:deploy_beta'
 alias vds='rake vlad:deploy_staging'
 alias vc='rake vlad:clone'
+
+# Vagrant
+alias v='vagrant'
 
 # TDD / BDD
 
