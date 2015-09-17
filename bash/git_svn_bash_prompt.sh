@@ -75,7 +75,7 @@ function set_git_branch {
   fi
 
   # Get the name of the branch.
-  branch_pattern="^# On branch ([^${IFS}]*)"
+  branch_pattern="^On branch ([^${IFS}]*)"
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
   fi
@@ -129,7 +129,7 @@ function set_bash_prompt () {
   fi
 
   # Set the bash prompt variable.
-  PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]${BRANCH}${PROMPT_SYMBOL} "
+  PS1="\[$EGREEN\]\u@\h\[$ECYAN\]:\[$ECYAN\]\w\[$NO_COLOR\]${BRANCH}${PROMPT_SYMBOL} \n→ "
 }
 
 # Tell bash to execute this function just before displaying its prompt.

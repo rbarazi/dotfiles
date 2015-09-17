@@ -30,9 +30,9 @@
 ######################
 .DS_Store*
 ehthumbs.db
-Icon?
 Thumbs.db
 
 # Custom environment files #
 ############################
 .rvmrc
+.ruby-version
