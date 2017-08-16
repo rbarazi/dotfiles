@@ -1,6 +1,10 @@
 # Wave
 export PAYROLL_DEPLOY_USER='deploy'
 
+export XCODE_PATH=/Library/Developer/CommandLineTools/usr/bin
+export PATH=$XCODE_PATH:$PATH
+
+export AWS_PROFILE="AmidshipAdmin"
 export EC2_HOME="~/bin/ec2"
 export NODE_PATH="/usr/local/lib/node_modules"
 export NPM_PATH="/usr/local/share/npm"
@@ -43,7 +47,7 @@ export HISTFILE="${HOME}/.history/$(date -u +%Y.%m.%d.%H.%M.%S)_${HOSTNAME_SHORT
 
 # RVM
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:/Users/rbarazi/perl5/ # Add RVM to PATH for scripting
+export PATH=$PATH:/Users/rbarazi/perl5 # Add RVM to PATH for scripting
 
 # PERL
 export PERL_MB_OPT="--install_base \"/Users/rbarazi/perl5\""; export PERL_MB_OPT;

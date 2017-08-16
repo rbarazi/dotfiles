@@ -2,21 +2,19 @@
 
 # Utility
 alias reload='source ~/bin/dotfiles/bash/aliases'
-alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
-alias ee="mate ~/bin/dotfiles/bash/env"
-alias ec="mate ~/bin/dotfiles/bash/config"
+alias ea='subl -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
+alias ee="subl ~/bin/dotfiles/bash/env"
+alias ec="subl ~/bin/dotfiles/bash/config"
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
 alias cdf='cd ~/projects/furnish'
-alias cdw='cd ~/projects/wave/waveapps/src/payroll'
-alias cda='cd ~/projects/amidship/amidship && subl .'
+alias cdw='cd ~/projects/payroll'
+alias cda='cd ~/projects/amidship/amidship'
+alias cdm='cd ~/projects/mobilbid/mobilbid'
+alias cdl='cd ~/projects/lancaster-website'
 alias cdp='cd ~/projects/phase2'
 alias cdb='rvm 1.9.2-head && cd ~/projects/beginningrails/blog'
-
-function cdp() {
- cd ~/projects/$*
-}
 
 # Common -- Some are from Damian Conway
 alias a='ls -A' # -A all except literal . ..
@@ -29,6 +27,10 @@ function cdc() {
 }
 alias cls='clear; ls'
 alias h='history'
+function hisgrep() {
+  grep -r "$@" ~/.history/* | grep "$@" | awk -F: {'print $2'}
+}
+
 alias l.='ls -d .[^.]*'
 alias l='ls -lhGt'  # -l long listing, most recent first
                     # -G color
@@ -77,7 +79,7 @@ function new-hg() {
 alias my_stop="sudo launchctl stop org.macports.mysql5"
 alias my_start="sudo launchctl start org.macports.mysql5"
 alias my_rs="my_stop ; my_start"
-alias myconf="mate /opt/local/etc/mysql5/my.cnf"
+alias myconf="subl /opt/local/etc/mysql5/my.cnf"
 alias mysql5='mysql'
 alias mysqladmin5='mysqladmin'
 
@@ -105,7 +107,7 @@ alias gp='git push'
 alias gst='git status'
 alias gt='git status'
 alias g='git status'
-alias eg='mate .git/config'
+alias eg='subl .git/config'
 alias glg='git log --graph --pretty=format:"%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 alias gslg='git shortlog -s -n'
 # Git clone from GitHub
@@ -149,11 +151,9 @@ function ct() {
   etags --append --output=TAGS $*
 }
 
-# TextMate
-alias mm="mate"
-alias m="mate ."
-alias mp="mate actions bi bin Capfile Vagrantfile doc spec Gemfile* app features test Guardfile config lib Procfile *.ru *.md cookbooks public Rakefile db script"
-alias mq="mate app config lib db schema public spec test vendor/gems vendor/plugins Rakefile Capfile Vladfile Todofile README stories merb slices tasks features &"
+# Sublime
+alias mp="subl actions bi bin Capfile Vagrantfile doc spec Gemfile* app features test Guardfile config lib Procfile *.ru *.md cookbooks public Rakefile db script"
+alias mq="subl app config lib db schema public spec test vendor/gems vendor/plugins Rakefile Capfile Vladfile Todofile README stories merb slices tasks features &"
 
 # Ruby
 alias r="rake"
@@ -170,6 +170,9 @@ function markdown() {
 /Applications/TextMate.app/Contents/SharedSupport/Support/bin/Markdown.pl $1 > $1.html
 }
 
+# Web
+alias webs="python -m SimpleHTTPServer 9000"
+
 # Rails
 alias mr='mongrel_rails start'
 alias ms='mongrel_rails stop'
@@ -185,6 +188,9 @@ alias ss='./script/server'
 alias r='./script/rails'
 alias tl='tail -f log/*.log'
 alias ts='thin start'
+
+# Heroku
+alias herokuc='heroku run rails console'
 
 # Bundler
 alias be='bundle exec'

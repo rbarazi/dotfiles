@@ -68,13 +68,3 @@ eval "$(rbenv init -)"
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
-
-# Git autocompletion
-if [ -f ~/bin/dotfiles/bash/git-completion.bash ]; then
-  . ~/bin/dotfiles/bash/git-completion.bash
-fi
-
-# Hub autocompletion
-if [ -f ~/bin/dotfiles/bash/hub.bash_completion.sh ]; then
-  . ~/bin/dotfiles/bash/hub.bash_completion.sh
-fi

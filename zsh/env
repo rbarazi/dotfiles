@@ -1,2 +1,53 @@
+export PAYROLL_DEPLOY_USER='deploy'
+
+export XCODE_PATH=/Library/Developer/CommandLineTools/usr/bin
+export PATH=$XCODE_PATH:$PATH
+
+export AWS_PROFILE="AmidshipAdmin"
+export EC2_HOME="~/bin/ec2"
+export NODE_PATH="/usr/local/lib/node_modules"
+export NPM_PATH="/usr/local/share/npm"
+export JRUBY_OPTS=--1.9
+
+# Set PATH, CDPATH, EDITOR, etc.
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH=/Users/rbarazi/java/android-sdk-mac_86/tools:$PATH
+export PATH=/usr/local/git/bin:$PATH
+
+export MAGICK_HOME="/usr/local/imagemagick"
+export PATH=$MAGICK_HOME/bin:$PATH
+# export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"
+
+#Add below lines in the profile
+export M2_HOME=/usr/local/apache-maven-3.2.3
+
+export PATH=~/bin:$PATH
+export PATH=$EC2_HOME/bin:$PATH
+export PATH=$NPM_PATH/bin:$PATH
+export PATH=~/.cabal/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:$M2_HOME/bin
+
 export EDITOR="subl -w"
-export PATH=$PATH:~/bin
+export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.54/libexec/webapps/ROOT/
+# export EDITOR='vim'
+
+# Ansible
+export ANSIBLE_HOSTS=~/bin/ansible/ec2.py
+export EC2_INI_PATH=~/bin/ansible/ec2.ini
+
+# History
+export HOSTNAME="$(hostname)"
+export HOSTNAME_SHORT="${HOSTNAME%%.*}"
+export HISTSIZE=""
+export HISTFILESIZE=""
+export HISTFILE="${HOME}/.history/$(date -u +%Y.%m.%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+
+
+# RVM
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/Users/rbarazi/perl5 # Add RVM to PATH for scripting
+
+# PERL
+export PERL_MB_OPT="--install_base \"/Users/rbarazi/perl5\""; export PERL_MB_OPT;
+export PERL_MM_OPT="INSTALL_BASE=/Users/rbarazi/perl5"; export PERL_MM_OPT;
